@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="trabajadores_view_form" model="ir.ui.view">
+        <field name="name">trabajadores.form</field>
+        <field name="model">trabajadores</field>
+        <field name="arch" type="xml">
+            <form string="Trabajadores">
+                <sheet>
+                    <group>
+                            <field name="Nombre"/>
+                            <field name="Apellidos"/>
+                    </group>
+                    <group>
+                            <field name="Puesto"/>
+                            <field name="Salario"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="trabajadores_view_tree" model="ir.ui.view">
+        <field name="name">trabajadores.tree</field>
+        <field name="model">trabajadores</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="Nombre"/>
+                <field name="Apellidos"/>
+                <field name="Puesto"/>
+                <field name="Salario"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_trabajadores" model="ir.actions.act_window">
+        <field name="name">Trabajadores</field>
+        <field name="res_model">trabajadores</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
