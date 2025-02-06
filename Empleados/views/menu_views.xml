@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="Empleados_menu_root" name="Empleados" sequence="10"/>
+    
+    <menuitem 
+        id="empleado_menu"
+        name="Empleados"
+        parent="Empleados_menu_root"
+        action="action_empleado"
+        sequence="1"/>
+
+    <menuitem 
+        id="trabajadores_menu"
+        name="Trabajadores"
+        parent="Empleados_menu_root"
+        action="action_trabajadores"
+        sequence="2"/>
+
+    <menuitem 
+        id="Empleados_menu_app"
+        name="Empleados"
+        action="action_empleado"
+        sequence="1"
+        web_icon="Empleados,static/description/icon.png"/>
+</odoo>
