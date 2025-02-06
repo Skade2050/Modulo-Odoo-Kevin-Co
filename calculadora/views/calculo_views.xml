@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="calculo_retenciones_form_view" model="ir.ui.view">
+        <field name="name">calculo.retenciones.form</field>
+        <field name="model">calculo.retenciones</field>
+        <field name="arch" type="xml">
+            <form string="Cálculo de Retenciones">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="empleado_id"/>
+                            <field name="fecha_calculo"/>
+                            <field name="salario_base"/>
+                        </group>
+                        <group>
+                            <field name="porcentaje_ss"/>
+                            <field name="retencion_ss"/>
+                            <field name="salario_neto"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="calculo_retenciones_tree_view" model="ir.ui.view">
+        <field name="name">calculo.retenciones.tree</field>
+        <field name="model">calculo.retenciones</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="empleado_id"/>
+                <field name="fecha_calculo"/>
+                <field name="salario_base"/>
+                <field name="retencion_ss"/>
+                <field name="salario_neto"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_calculo_retenciones" model="ir.actions.act_window">
+        <field name="name">Cálculo de Retenciones</field>
+        <field name="res_model">calculo.retenciones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
